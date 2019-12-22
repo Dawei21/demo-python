@@ -15,14 +15,14 @@ def getRedisDate():
 	for boardId in board_list:
 		cache_key = 'vip#14_Question:Send:Email:Schedule:TimePoint%s' % boardId
 		get = strict_redis.get(cache_key)
-		print(str(cache_key + " = " + str(get)))
-		result = strict_redis.set(cache_key, "1575508917000");
+		print(cache_key + " = " + get)
+		result = strict_redis.set(cache_key, "1575508917000")
 		print(result)
 		# if index_num > 1:
 		#       output.write(",")
 		# output.write(str(get))
 		# output.write("\n")
-		print(str(cache_key + " = " + str(get)))
+		print(cache_key + " = " + get)
 	print('Finish')
 
 
